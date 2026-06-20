@@ -6,7 +6,7 @@ Module: Natural Language Processing
 
 Industry Focus: NVIDIA and the AI Ecosystem
 
-Author: Hadassah Chme13
+Author: Hadassah Mercy Gottemukula
 ## Project Overview
 
 This project implements an AI-powered Strategic Intelligence Agent designed to support executive decision-making for NVIDIA. The system continuously collects industry intelligence, stores and indexes information using embeddings and vector search, and generates evidence-based strategic recommendations using a local Large Language Model (LLM).
