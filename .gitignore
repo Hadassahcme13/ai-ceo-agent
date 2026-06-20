@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+data/processed/embeddings.npy
+data/processed/faiss_index.bin

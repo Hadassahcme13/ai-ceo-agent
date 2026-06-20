@@ -9,3 +9,5 @@ praw
 textblob
 plotly
 ollama
+beautifulsoup4
+requests
