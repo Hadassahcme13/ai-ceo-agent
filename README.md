@@ -1,232 +1,307 @@
-# NVIDIA AI CEO Strategic Intelligence Agent
+# 🚀 NVIDIA AI CEO Strategic Intelligence Agent
 
-## Final Examination Project
+<div align="center">
 
-Module: Natural Language Processing
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge\&logo=python)
+![NLP](https://img.shields.io/badge/NLP-RAG-green?style=for-the-badge)
+![FAISS](https://img.shields.io/badge/VectorDB-FAISS-orange?style=for-the-badge)
+![Qwen](https://img.shields.io/badge/LLM-Qwen_2.5-red?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-ff4b4b?style=for-the-badge\&logo=streamlit)
 
-Industry Focus: NVIDIA and the AI Ecosystem
+### 🎓 Master's Final Examination Project
 
-Author: Hadassah Mercy Gottemukula
-## Project Overview
+**AI-Powered Strategic Intelligence Platform for Executive Decision Support**
 
-This project implements an AI-powered Strategic Intelligence Agent designed to support executive decision-making for NVIDIA. The system continuously collects industry intelligence, stores and indexes information using embeddings and vector search, and generates evidence-based strategic recommendations using a local Large Language Model (LLM).
+Transforming NVIDIA Industry Intelligence into Evidence-Based Strategic Recommendations
 
-The project demonstrates the practical application of:
-
-* Information Retrieval
-* Embeddings
-* Vector Databases
-* Retrieval-Augmented Generation (RAG)
-* Large Language Models (LLMs)
-* Strategic Intelligence Analysis
-* Evidence-Based Recommendations
-* Dashboard Development
+</div>
 
 ---
 
-## Business Problem
+# 📌 Project Overview
 
-Modern organizations face information overload from news sources, investor relations announcements, industry developments, and competitor activity.
+Modern organizations face an overwhelming amount of information from:
 
-This project addresses this challenge by building an AI Strategic Intelligence Agent capable of:
+* 📰 Industry News
+* 📈 Investor Relations Announcements
+* 🤝 Strategic Partnerships
+* ⚔️ Competitor Activities
+* 🧠 AI Technology Developments
 
-* Collecting industry intelligence
-* Identifying opportunities and risks
-* Detecting emerging trends
-* Generating evidence-based recommendations
-* Supporting executive decision-making
+This project builds an **AI Strategic Intelligence Agent** capable of:
 
-The selected industry focus is:
+✅ Collecting Industry Intelligence
 
-**NVIDIA and the Artificial Intelligence Ecosystem**
+✅ Building a Knowledge Repository
+
+✅ Performing Semantic Search
+
+✅ Generating Strategic Insights
+
+✅ Producing Evidence-Based Recommendations
+
+✅ Supporting Executive Decision Making
 
 ---
 
-## System Architecture
+# 🎯 Project Objectives
+
+| Objective                 | Description                                              |
+| ------------------------- | -------------------------------------------------------- |
+| 📥 Information Collection | Gather NVIDIA-related intelligence from multiple sources |
+| 🧠 Knowledge Creation     | Create a searchable intelligence repository              |
+| 🔍 Semantic Retrieval     | Retrieve relevant information using embeddings           |
+| 🤖 Strategic Analysis     | Generate executive-level insights                        |
+| 📊 Recommendations        | Produce evidence-based recommendations                   |
+| 🖥 Dashboard              | Provide an interactive decision-support interface        |
+
+---
+
+# 🏗 System Architecture
 
 ```text
-NVIDIA News
-Google News
-Investor Relations
-Competitor News
-        ↓
-Data Collection
-        ↓
-Knowledge Repository (CSV)
-        ↓
-Embeddings (BGE Small)
-        ↓
-FAISS Vector Database
-        ↓
-Semantic Retrieval
-        ↓
-Qwen 2.5 (Ollama)
-        ↓
-Strategic Intelligence Engine
-        ↓
-Evidence-Based Recommendations
-        ↓
-CEO Decision Support
+┌─────────────────────┐
+│   NVIDIA Newsroom   │
+└──────────┬──────────┘
+           │
+
+┌─────────────────────┐
+│    Google News      │
+└──────────┬──────────┘
+           │
+
+┌─────────────────────┐
+│ Investor Relations  │
+└──────────┬──────────┘
+           │
+
+┌─────────────────────┐
+│ Competitor News     │
+└──────────┬──────────┘
+           │
+           ▼
+
+┌────────────────────────────┐
+│     Data Collection Layer  │
+└────────────┬───────────────┘
+             ▼
+
+┌────────────────────────────┐
+│ Knowledge Repository       │
+│ (313 Documents)            │
+└────────────┬───────────────┘
+             ▼
+
+┌────────────────────────────┐
+│ BGE Small Embeddings       │
+└────────────┬───────────────┘
+             ▼
+
+┌────────────────────────────┐
+│ FAISS Vector Database      │
+└────────────┬───────────────┘
+             ▼
+
+┌────────────────────────────┐
+│ Semantic Retrieval Engine  │
+└────────────┬───────────────┘
+             ▼
+
+┌────────────────────────────┐
+│ Qwen 2.5 via Ollama        │
+└────────────┬───────────────┘
+             ▼
+
+┌────────────────────────────┐
+│ Strategic Intelligence     │
+└────────────┬───────────────┘
+             ▼
+
+┌────────────────────────────┐
+│ CEO Recommendations        │
+└────────────────────────────┘
 ```
 
 ---
 
-## Data Sources
+# 🔄 RAG Workflow
 
-The system collects information from multiple sources:
-
-### NVIDIA Newsroom
-
-* Product announcements
-* Partnerships
-* AI developments
-
-### NVIDIA Investor Relations
-
-* Corporate updates
-* Financial announcements
-* Strategic initiatives
-
-### Google News
-
-* Industry developments
-* NVIDIA-related coverage
-
-### Competitor Intelligence
-
-* AMD
-* Google
-* Broadcom
-* Other AI ecosystem participants
+```text
+User Question
+      │
+      ▼
+Convert Query to Embedding
+      │
+      ▼
+FAISS Similarity Search
+      │
+      ▼
+Retrieve Relevant Articles
+      │
+      ▼
+Qwen 2.5 LLM
+      │
+      ▼
+Strategic Analysis
+      │
+      ▼
+Evidence-Based Recommendation
+```
 
 ---
 
-## Technologies Used
+# 🛠 Technology Stack
 
-### Programming Language
-
-* Python
-
-### Data Collection
-
-* Feedparser
-* Requests
-* BeautifulSoup
-
-### Data Processing
-
-* Pandas
-* NumPy
-
-### Embeddings
-
-* BAAI/bge-small-en-v1.5
-
-### Vector Database
-
-* FAISS
-
-### Large Language Model
-
-* Qwen 2.5
-* Ollama
-
-### Dashboard
-
-* Streamlit
+| Layer           | Technology                          |
+| --------------- | ----------------------------------- |
+| Programming     | Python                              |
+| Data Processing | Pandas, NumPy                       |
+| Data Collection | Feedparser, Requests, BeautifulSoup |
+| Embeddings      | BAAI/bge-small-en-v1.5              |
+| Vector Search   | FAISS                               |
+| LLM             | Qwen 2.5                            |
+| Local Inference | Ollama                              |
+| Dashboard       | Streamlit                           |
+| Version Control | Git & GitHub                        |
 
 ---
 
-## Project Structure
+# 📂 Project Structure
 
 ```text
 ai-ceo-agent/
-
-collectors/
 │
-├── nvidia_collector.py
-├── google_nvidia_news.py
-├── competitor_news.py
-├── nvidia_ir_collector.py
-├── merge_data.py
-
-embeddings/
+├── collectors/
+│   ├── nvidia_collector.py
+│   ├── google_nvidia_news.py
+│   ├── competitor_news.py
+│   ├── nvidia_ir_collector.py
+│   └── merge_data.py
 │
-├── embed.py
-
-rag/
+├── embeddings/
+│   └── embed.py
 │
-├── build_index.py
-├── retrieve.py
-
-intelligence/
+├── rag/
+│   ├── build_index.py
+│   └── retrieve.py
 │
-├── strategic_engine.py
-├── recommendations.py
-
-dashboard/
+├── intelligence/
+│   ├── strategic_engine.py
+│   └── recommendations.py
 │
-├── app.py
-
-data/
+├── dashboard/
+│   └── app.py
 │
-├── raw/
+├── data/
+│   ├── raw/
+│   └── processed/
 │
-└── processed/
-
-requirements.txt
-README.md
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## Features
+# 📊 Data Sources
 
-### Strategic Intelligence Engine
+| Source             | Purpose                |
+| ------------------ | ---------------------- |
+| NVIDIA Newsroom    | Product announcements  |
+| Investor Relations | Corporate intelligence |
+| Google News        | Industry developments  |
+| Competitor News    | Competitive analysis   |
 
-The system generates:
+### 📈 Dataset Statistics
 
-* Strategic Opportunities
-* Strategic Risks
-* Emerging Trends
-* CEO Action Plans
-
-### Evidence-Based Recommendations
-
-Each recommendation includes:
-
-#### Recommendation
-
-Example:
-
-* Expand NVIDIA AI infrastructure investments
-
-#### Supporting Evidence
-
-* Evidence Source 1
-* Evidence Source 2
-* Evidence Source 3
-
-#### Expected Impact
-
-* Revenue Growth
-* Market Differentiation
-* Customer Acquisition
-
-#### Risk Assessment
-
-* Financial Risk
-* Operational Risk
-* Strategic Risk
+| Metric              | Value     |
+| ------------------- | --------- |
+| Documents Collected | 313       |
+| Sources             | 4         |
+| Embedding Model     | BGE Small |
+| Vector Dimensions   | 384       |
+| Vector Database     | FAISS     |
+| LLM                 | Qwen 2.5  |
 
 ---
 
-## Installation
+# 🧠 NLP Concepts Implemented
+
+| NLP Technique                  | Usage                       |
+| ------------------------------ | --------------------------- |
+| Text Processing                | Knowledge preparation       |
+| Embeddings                     | Semantic representation     |
+| Semantic Similarity            | Document retrieval          |
+| Information Retrieval          | Knowledge search            |
+| Vector Search                  | FAISS indexing              |
+| Retrieval-Augmented Generation | Context-grounded generation |
+| Large Language Models          | Strategic reasoning         |
+
+---
+
+# 🎯 Strategic Intelligence Engine
+
+The system generates:
+
+### ✅ Strategic Opportunities
+
+Identify growth opportunities and market expansion potential.
+
+### ⚠ Strategic Risks
+
+Identify threats, competition, and business risks.
+
+### 📈 Emerging Trends
+
+Detect new developments and industry shifts.
+
+### 👨‍💼 CEO Recommendations
+
+Generate executive-level action plans.
+
+---
+
+# 📋 Evidence-Based Recommendation Framework
+
+Every recommendation contains:
+
+| Component           | Description            |
+| ------------------- | ---------------------- |
+| Recommendation      | Strategic action       |
+| Supporting Evidence | Article-based evidence |
+| Expected Impact     | Business value         |
+| Risk Assessment     | Potential risks        |
+
+### Example
+
+```text
+Recommendation:
+Expand AI Infrastructure Investments
+
+Supporting Evidence:
+- NVIDIA & LG AI Factory
+- HPE AI Factory
+- SK Telecom AI Partnership
+
+Expected Impact:
+- Revenue Growth
+- Market Differentiation
+- Customer Acquisition
+
+Risk Assessment:
+- Financial Risk
+- Operational Risk
+- Strategic Risk
+```
+
+---
+
+# 🚀 Installation
 
 ### Clone Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/your-repository/ai-ceo-agent.git
+
 cd ai-ceo-agent
 ```
 
@@ -237,8 +312,6 @@ python -m venv venv
 ```
 
 ### Activate Environment
-
-Windows:
 
 ```bash
 venv\Scripts\activate
@@ -252,7 +325,7 @@ pip install -r requirements.txt
 
 ---
 
-## Running The Project
+# ▶ Running the Project
 
 ### Collect Data
 
@@ -275,7 +348,7 @@ python collectors/merge_data.py
 python embeddings/embed.py
 ```
 
-### Build FAISS Index
+### Build Vector Database
 
 ```bash
 python rag/build_index.py
@@ -301,54 +374,62 @@ streamlit run dashboard/app.py
 
 ---
 
-## Example Outputs
+# 📸 Dashboard Preview
 
-### Strategic Intelligence
+### Dashboard
 
-* Opportunities
-* Risks
-* Trends
-* CEO Recommendations
+(Add Screenshot Here)
+
+### Strategic Intelligence Report
+
+(Add Screenshot Here)
 
 ### Evidence-Based Recommendations
 
-* Recommendation
-* Supporting Evidence
-* Expected Impact
-* Risk Assessment
+(Add Screenshot Here)
 
 ---
 
-## Learning Outcomes
+# 🔮 Future Improvements
+
+* Real-Time Monitoring
+* Sentiment Analysis
+* Multi-Agent Architecture
+* Automated Reporting
+* Fine-Tuned Industry Models
+* Additional Intelligence Sources
+* Advanced Analytics Dashboard
+
+---
+
+# 🎓 Learning Outcomes
 
 This project demonstrates practical implementation of:
 
-* Retrieval-Augmented Generation (RAG)
-* Semantic Search
-* Embeddings
-* Vector Databases
-* Local LLM Deployment
-* Strategic Intelligence Systems
-* Executive Decision Support
+✅ Natural Language Processing
+
+✅ Embeddings
+
+✅ Vector Databases
+
+✅ Information Retrieval
+
+✅ Retrieval-Augmented Generation (RAG)
+
+✅ Large Language Models
+
+✅ Strategic Intelligence Systems
+
+✅ Executive Decision Support
 
 ---
 
-## Future Improvements
+# 👨‍💻 Author
 
-* Real-time data collection
-* Automated scheduling
-* Multi-company analysis
-* Advanced dashboards
-* Sentiment analysis
-* Multi-agent architecture
-* Interactive CEO chatbot
+### Hadassah Mercy Gottemukula
 
----
+Master's Final Examination Project NLP
 
-## Author
+NVIDIA AI CEO Strategic Intelligence Agent
 
-Final Examination Project
-
-AI Strategic Intelligence Agent
-
-NVIDIA Industry Focus
+Built using NLP, RAG, FAISS, Qwen 2.5 and Streamlit 🚀
