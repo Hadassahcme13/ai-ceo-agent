@@ -57,10 +57,10 @@ This project builds an **AI Strategic Intelligence Agent** capable of:
 
 ---
 
-# 🏗 System Architecture
-````markdown
+## System Architecture
+
 ```mermaid
-flowchart TD
+flowchart TB
 
     A[NVIDIA Newsroom]
     B[Google News]
@@ -82,11 +82,12 @@ flowchart TD
 
     I --> J[Qwen 2.5 via Ollama]
 
-    J --> K[Strategic Intelligence]
+    J --> K[Strategic Intelligence Engine]
 
     K --> L[CEO Recommendations]
 ```
 ````
+
 
 # 🔄 RAG Workflow
 
