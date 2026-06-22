@@ -20,7 +20,6 @@ query = input(
 )
 
 # Use latest documents as context
-# (Simple version for now)
 context = "\n".join(
     df["title"]
     .fillna("")
