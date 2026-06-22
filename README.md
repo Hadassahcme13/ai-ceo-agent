@@ -300,7 +300,7 @@ Risk Assessment:
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-repository/ai-ceo-agent.git
+git clone https://github.com/Hadassahcme13/ai-ceo-agent
 
 cd ai-ceo-agent
 ```
