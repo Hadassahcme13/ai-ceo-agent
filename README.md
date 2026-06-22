@@ -59,7 +59,7 @@ This project builds an **AI Strategic Intelligence Agent** capable of:
 
 # 🏗 System Architecture
 
-                                 ```text
+                                 
                                  ┌─────────────────────┐
                                  │   NVIDIA Newsroom   │
                                  └──────────┬──────────┘
@@ -113,7 +113,7 @@ This project builds an **AI Strategic Intelligence Agent** capable of:
                                  ┌────────────────────────────┐
                                  │   CEO Recommendations      │
                                  └────────────────────────────┘
-                                 ```
+                                 
 
 ---
 
