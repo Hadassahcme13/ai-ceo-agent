@@ -173,7 +173,7 @@ ai-ceo-agent/
 │
 ├── collectors/
 │   ├── nvidia_collector.py
-│   ├── google_nvidia_news.py
+│   ├── nvidia_google_news.py
 │   ├── competitor_news.py
 │   ├── nvidia_ir_collector.py
 │   └── merge_data.py
@@ -331,7 +331,7 @@ pip install -r requirements.txt
 
 ```bash
 python collectors/nvidia_collector.py
-python collectors/google_nvidia_news.py
+python collectors/nvidia_google_news.py
 python collectors/competitor_news.py
 python collectors/nvidia_ir_collector.py
 ```
