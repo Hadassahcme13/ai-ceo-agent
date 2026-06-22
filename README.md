@@ -57,6 +57,7 @@ This project builds an **AI Strategic Intelligence Agent** capable of:
 
 ---
 
+````markdown
 ## System Architecture
 
 ```mermaid
