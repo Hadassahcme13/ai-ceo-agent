@@ -10,10 +10,20 @@ files = [
 all_data = []
 
 for file in files:
-
     print(f"Loading {file}")
-
     df = pd.read_csv(file)
+
+   
+    df.dropna(                 # Remove rows with missing titles
+        subset=["title"],
+        inplace=True
+    )
+  
+    df["title"] = (       # Remove extra spaces
+        df["title"]
+        .astype(str)
+        .str.strip()
+    )
 
     all_data.append(df)
 
@@ -22,8 +32,7 @@ master_df = pd.concat(
     ignore_index=True
 )
 
-# Remove duplicate titles
-master_df.drop_duplicates(
+master_df.drop_duplicates(   # Remove duplicates
     subset=["title"],
     inplace=True
 )
