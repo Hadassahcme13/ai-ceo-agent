@@ -58,64 +58,35 @@ This project builds an **AI Strategic Intelligence Agent** capable of:
 ---
 
 # 🏗 System Architecture
+````markdown
+```mermaid
+flowchart TD
 
-                                 
-                                 ┌─────────────────────┐
-                                 │   NVIDIA Newsroom   │
-                                 └──────────┬──────────┘
-                                            │
-                                            ▼
-                                 ┌─────────────────────┐
-                                 │    Google News      │
-                                 └──────────┬──────────┘
-                                            │
-                                            ▼
-                                 ┌─────────────────────┐
-                                 │ Investor Relations  │
-                                 └──────────┬──────────┘
-                                            │
-                                            ▼
-                                 ┌─────────────────────┐
-                                 │ Competitor News     │
-                                 └──────────┬──────────┘
-                                            │
-                                            ▼
-                                 ┌────────────────────────────┐
-                                 │     Data Collection Layer  │
-                                 └────────────┬───────────────┘
-                                              ▼
-                                 ┌────────────────────────────┐
-                                 │ Knowledge Repository       │
-                                 │ (313 Documents)            │
-                                 └────────────┬───────────────┘
-                                              ▼
-                                 ┌────────────────────────────┐
-                                 │ BGE Small Embeddings       │
-                                 └────────────┬───────────────┘
-                                              ▼
-                                 ┌────────────────────────────┐
-                                 │ FAISS Vector Database      │
-                                 └────────────┬───────────────┘
-                                              ▼
-                                 ┌────────────────────────────┐
-                                 │ Semantic Retrieval Engine  │
-                                 └────────────┬───────────────┘
-                                              ▼
-                                 
-                                 ┌────────────────────────────┐
-                                 │ Qwen 2.5 via Ollama        │
-                                 └────────────┬───────────────┘
-                                              ▼
-                                 ┌────────────────────────────┐
-                                 │ Strategic Intelligence     │
-                                 └────────────┬───────────────┘
-                                              ▼
-                                 ┌────────────────────────────┐
-                                 │   CEO Recommendations      │
-                                 └────────────────────────────┘
-                                 
+    A[NVIDIA Newsroom]
+    B[Google News]
+    C[Investor Relations]
+    D[Competitor News]
 
----
+    A --> E[Data Collection Layer]
+    B --> E
+    C --> E
+    D --> E
+
+    E --> F[Knowledge Repository<br/>313 Documents]
+
+    F --> G[BGE Small Embeddings]
+
+    G --> H[FAISS Vector Database]
+
+    H --> I[Semantic Retrieval Engine]
+
+    I --> J[Qwen 2.5 via Ollama]
+
+    J --> K[Strategic Intelligence]
+
+    K --> L[CEO Recommendations]
+```
+````
 
 # 🔄 RAG Workflow
 
