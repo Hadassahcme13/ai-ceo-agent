@@ -64,34 +64,31 @@ This project builds an **AI Strategic Intelligence Agent** capable of:
 │   NVIDIA Newsroom   │
 └──────────┬──────────┘
            │
-
+           ▼
 ┌─────────────────────┐
 │    Google News      │
 └──────────┬──────────┘
            │
-
+           ▼
 ┌─────────────────────┐
 │ Investor Relations  │
 └──────────┬──────────┘
            │
-
+           ▼
 ┌─────────────────────┐
 │ Competitor News     │
 └──────────┬──────────┘
            │
            ▼
-
 ┌────────────────────────────┐
 │     Data Collection Layer  │
 └────────────┬───────────────┘
              ▼
-
 ┌────────────────────────────┐
 │ Knowledge Repository       │
 │ (313 Documents)            │
 └────────────┬───────────────┘
              ▼
-
 ┌────────────────────────────┐
 │ BGE Small Embeddings       │
 └────────────┬───────────────┘
