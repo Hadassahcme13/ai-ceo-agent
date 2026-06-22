@@ -372,23 +372,7 @@ python intelligence/recommendations.py
 streamlit run dashboard/app.py
 ```
 
----
 
-# 📸 Dashboard Preview
-
-### Dashboard
-
-(Add Screenshot Here)
-
-### Strategic Intelligence Report
-
-(Add Screenshot Here)
-
-### Evidence-Based Recommendations
-
-(Add Screenshot Here)
-
----
 
 # 🔮 Future Improvements
 
