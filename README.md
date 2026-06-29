@@ -259,58 +259,288 @@ Validator->>Intelligence: Validated Evidence
 Intelligence->>Dashboard: CEO Strategic Report
 ```
 
+# ⚙️ Installation
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/AI-CEO-Agent.git
+
+cd AI-CEO-Agent
+```
+
 ---
 
-# 📂 Project Structure
+## 2️⃣ Create a Virtual Environment
+
+### Windows
+
+```bash
+python -m venv venv
+
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+python3 -m venv venv
+
+source venv/bin/activate
+```
+
+---
+
+## 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 4️⃣ Install Ollama
+
+Download Ollama
+
+https://ollama.com/download
+
+Pull the Qwen model
+
+```bash
+ollama pull qwen2.5:3b
+```
+
+Verify installation
+
+```bash
+ollama run qwen2.5:3b
+```
+
+---
+
+## 5️⃣ Build the FAISS Knowledge Base
+
+```bash
+python scripts/build_content_dataset.py
+```
+
+This automatically
+
+- Downloads business articles
+- Cleans documents
+- Generates embeddings
+- Builds the FAISS vector database
+
+---
+
+## 6️⃣ Launch the Dashboard
+
+```bash
+streamlit run dashboard/app.py
+```
+
+Open
+
+```
+http://localhost:8501
+```
+
+---
+
+# 🖥 Dashboard Overview
+
+The Streamlit dashboard provides an executive interface for interacting with the AI system.
+
+## Dashboard Modules
+
+| Module | Description |
+|---------|-------------|
+| 🎯 Strategic Goal | Accepts CEO business objectives |
+| 🧠 Planner | Displays AI-generated execution plan |
+| 🔍 Retrieved Intelligence | Shows relevant articles |
+| 🚀 Opportunities | Strategic growth opportunities |
+| ⚠ Risks | Evidence-based business risks |
+| 📈 Trends | Emerging market trends |
+| 😊 Sentiment | Market sentiment dashboard |
+| ✔ Validation Report | AI quality assurance |
+| 👔 CEO Report | Executive strategic briefing |
+
+---
+
+# 📊 Dashboard Workflow
+
+```mermaid
+flowchart LR
+
+Goal["🎯 Strategic Goal"]
+
+Planner["🧠 AI Planner"]
+
+Retrieve["🔍 Semantic Search"]
+
+Agents["🤖 AI Agents"]
+
+Validate["✔ Validation"]
+
+Report["👔 CEO Report"]
+
+Dashboard["📊 Dashboard"]
+
+Goal --> Planner
+
+Planner --> Retrieve
+
+Retrieve --> Agents
+
+Agents --> Validate
+
+Validate --> Report
+
+Report --> Dashboard
+
+style Goal fill:#4CAF50,color:white
+style Planner fill:#2196F3,color:white
+style Retrieve fill:#7E57C2,color:white
+style Agents fill:#FF9800,color:white
+style Validate fill:#8BC34A,color:white
+style Report fill:#E91E63,color:white
+style Dashboard fill:#009688,color:white
+```
+
+---
+
+# 🧠 AI Planning Example
+
+User Goal
+
+```
+What are NVIDIA's major strategic opportunities?
+```
+
+Planner generates
 
 ```text
-AI-CEO-Agent/
+1. SemanticRetriever
 
+↓
+
+2. OpportunityAnalyzer
+
+↓
+
+3. RiskAnalyzer
+
+↓
+
+4. TrendAnalyzer
+
+↓
+
+5. SentimentAnalyzer
+
+↓
+
+6. Validator
+
+↓
+
+7. StrategicIntelligenceEngine
+```
+
+Each tool executes independently while sharing a common memory.
+
+---
+
+# 📦 Technology Stack
+
+| Layer | Technology |
+|--------|------------|
+| Language | Python 3.11 |
+| LLM | Qwen 2.5 (Ollama) |
+| Vector Database | FAISS |
+| Embeddings | Sentence Transformers |
+| Dashboard | Streamlit |
+| AI Planning | Custom Planner |
+| Validation | Evidence-Based Validator |
+| Retrieval | Semantic Search |
+| Architecture | Multi-Agent AI |
+| Reports | JSON Structured Generation |
+
+---
+
+# 📁 Folder Structure
+
+```text
+AI-CEO-Agent
 │
-
-├── agent/
-
-│ ├── planner.py
-
-│ ├── executor.py
-
-│ ├── retriever.py
-
-│ ├── opportunity.py
-
-│ ├── risk.py
-
-│ ├── trend.py
-
-│ ├── sentiment.py
-
-│ ├── validator.py
-
-│ ├── strategic_intelligence.py
-
-│ ├── llm_helper.py
-
-│ └── tools.py
-
+├── agent
+│   ├── planner.py
+│   ├── executor.py
+│   ├── retriever.py
+│   ├── opportunity.py
+│   ├── risk.py
+│   ├── trend.py
+│   ├── sentiment.py
+│   ├── validator.py
+│   ├── strategic_intelligence.py
+│   ├── llm_helper.py
+│   └── tools.py
 │
-
-├── dashboard/
-
-│ └── app.py
-
+├── dashboard
+│   └── app.py
 │
-
-├── data/
-
-├── embeddings/
-
-├── rag/
-
-├── scripts/
-
+├── data
 │
-
+├── embeddings
+│
+├── rag
+│
+├── scripts
+│
 ├── main.py
-
+│
 └── README.md
+```
+
+---
+
+# 🎯 Core AI Pipeline
+
+```mermaid
+graph LR
+
+A["📰 Business News"]
+
+B["📚 FAISS"]
+
+C["🔍 Retriever"]
+
+D["🤖 AI Agents"]
+
+E["✔ Validator"]
+
+F["👔 Strategic Intelligence"]
+
+G["📊 Dashboard"]
+
+A --> B
+
+B --> C
+
+C --> D
+
+D --> E
+
+E --> F
+
+F --> G
+
+style A fill:#42A5F5,color:white
+style B fill:#7E57C2,color:white
+style C fill:#2196F3,color:white
+style D fill:#FF9800,color:white
+style E fill:#8BC34A,color:white
+style F fill:#E91E63,color:white
+style G fill:#009688,color:white
 ```
