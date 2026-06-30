@@ -435,3 +435,251 @@ The dashboard includes:
 - Executive Intelligence Report
 
 ---
+# 🤖 Multi-Agent Architecture
+
+Unlike traditional Retrieval-Augmented Generation (RAG) systems that rely on a single Large Language Model, this project adopts a **Multi-Agent AI Architecture**.
+
+Each AI agent is responsible for a specialized task while collaborating through a centralized **Shared Agent Memory**.
+
+This modular design improves:
+
+- 🎯 Specialization
+- 🔄 Collaboration
+- 📚 Explainability
+- ⚡ Scalability
+- ✔ Evidence-based reasoning
+
+---
+
+# 🧠 Multi-Agent Collaboration
+
+```mermaid
+flowchart LR
+
+Planner["🧠 Planner Agent"]
+
+Executor["⚙️ Executor Agent"]
+
+Retriever["🔍 Semantic Retriever"]
+
+Opportunity["🚀 Opportunity Analyzer"]
+
+Risk["⚠️ Risk Analyzer"]
+
+Trend["📈 Trend Analyzer"]
+
+Sentiment["😊 Sentiment Analyzer"]
+
+Memory["🧠 Shared Memory"]
+
+Validator["✔️ Validation Engine"]
+
+Intelligence["👔 Strategic Intelligence Engine"]
+
+Dashboard["📊 Streamlit Dashboard"]
+
+Planner --> Executor
+
+Executor --> Retriever
+
+Retriever --> Opportunity
+
+Retriever --> Risk
+
+Retriever --> Trend
+
+Retriever --> Sentiment
+
+Opportunity --> Memory
+
+Risk --> Memory
+
+Trend --> Memory
+
+Sentiment --> Memory
+
+Memory --> Validator
+
+Validator --> Intelligence
+
+Intelligence --> Dashboard
+
+style Planner fill:#5E35B1,color:#fff
+style Executor fill:#039BE5,color:#fff
+style Retriever fill:#3949AB,color:#fff
+style Opportunity fill:#43A047,color:#fff
+style Risk fill:#E53935,color:#fff
+style Trend fill:#FB8C00,color:#fff
+style Sentiment fill:#26C6DA,color:#fff
+style Memory fill:#8E24AA,color:#fff
+style Validator fill:#7CB342,color:#fff
+style Intelligence fill:#D81B60,color:#fff
+style Dashboard fill:#00897B,color:#fff
+```
+
+---
+
+# 🧠 Shared Agent Memory
+
+The system uses a centralized **Shared Agent Memory** that enables communication between independent AI agents.
+
+Instead of passing data directly between tools, each agent stores its output inside a common memory object.
+
+Every subsequent agent reads only the information it requires.
+
+---
+
+## Memory Structure
+
+```mermaid
+flowchart TD
+
+Memory["🧠 Shared Agent Memory"]
+
+Memory --> Goal["🎯 Goal"]
+
+Memory --> Docs["📄 Retrieved Documents"]
+
+Memory --> Opp["🚀 Opportunities"]
+
+Memory --> Risks["⚠️ Risks"]
+
+Memory --> Trends["📈 Trends"]
+
+Memory --> Sentiment["😊 Sentiment"]
+
+Memory --> Validation["✔️ Validation"]
+
+Memory --> Report["👔 Executive Report"]
+
+style Memory fill:#673AB7,color:#fff
+
+style Goal fill:#42A5F5,color:#fff
+
+style Docs fill:#5C6BC0,color:#fff
+
+style Opp fill:#43A047,color:#fff
+
+style Risks fill:#E53935,color:#fff
+
+style Trends fill:#FB8C00,color:#fff
+
+style Sentiment fill:#26C6DA,color:#fff
+
+style Validation fill:#7CB342,color:#fff
+
+style Report fill:#D81B60,color:#fff
+```
+
+---
+
+# 🔄 Agent Execution Sequence
+
+Every AI agent contributes one specialized capability before handing control to the next stage.
+
+```mermaid
+sequenceDiagram
+
+participant User
+
+participant Planner
+
+participant Executor
+
+participant Retriever
+
+participant Opportunity
+
+participant Risk
+
+participant Trend
+
+participant Sentiment
+
+participant Validator
+
+participant Intelligence
+
+participant Dashboard
+
+User->>Planner: Strategic Goal
+
+Planner->>Executor: Execution Plan
+
+Executor->>Retriever: Retrieve Documents
+
+Retriever-->>Opportunity: Relevant Articles
+
+Retriever-->>Risk: Relevant Articles
+
+Retriever-->>Trend: Relevant Articles
+
+Retriever-->>Sentiment: Relevant Articles
+
+Opportunity->>Validator: Opportunities
+
+Risk->>Validator: Risks
+
+Trend->>Validator: Trends
+
+Sentiment->>Validator: Sentiment
+
+Validator->>Intelligence: Validated Results
+
+Intelligence->>Dashboard: CEO Report
+```
+
+---
+
+# ⚙️ AI Agents
+
+| AI Agent | Responsibility | Output |
+|-----------|---------------|--------|
+| 🧠 Planner Agent | Analyzes the user's goal and creates an execution plan | Execution Plan |
+| ⚙️ Executor Agent | Dynamically executes each AI tool | Updated Shared Memory |
+| 🔍 Semantic Retriever | Retrieves relevant documents using FAISS | Relevant Articles |
+| 🚀 Opportunity Analyzer | Detects strategic business opportunities | Opportunities |
+| ⚠️ Risk Analyzer | Identifies strategic and operational risks | Risks |
+| 📈 Trend Analyzer | Detects emerging technologies and market trends | Trends |
+| 😊 Sentiment Analyzer | Classifies article-level market sentiment | Sentiment |
+| ✔️ Validation Engine | Verifies every insight using supporting evidence | Validated Intelligence |
+| 👔 Strategic Intelligence Engine | Generates executive strategic intelligence | CEO Report |
+
+---
+
+# 🎯 Why Multiple AI Agents?
+
+Instead of assigning one Large Language Model every task, the workload is divided among specialized AI agents.
+
+This approach offers several advantages:
+
+| Traditional Single-Agent AI | Multi-Agent AI System |
+|-----------------------------|-----------------------|
+| One prompt performs every task | Specialized agents perform dedicated tasks |
+| Difficult to validate outputs | Validation engine verifies every insight |
+| Limited explainability | Each agent has a transparent responsibility |
+| Hard to extend | New agents can be added easily |
+| Monolithic architecture | Modular and scalable design |
+| Single reasoning pathway | Collaborative reasoning across agents |
+
+---
+
+# ⭐ Key Architectural Advantages
+
+✅ Modular AI architecture
+
+✅ Dynamic planning and execution
+
+✅ Shared memory communication
+
+✅ Explainable reasoning
+
+✅ Evidence-based validation
+
+✅ Easy extensibility
+
+✅ Retrieval-Augmented Generation (RAG)
+
+✅ Executive-focused intelligence generation
+
+---
