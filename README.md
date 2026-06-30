@@ -943,3 +943,1234 @@ This enables:
 ✅ Scalable multi-agent framework
 
 ---
+# 🔍 Knowledge Base & Semantic Retrieval
+
+The AI CEO Strategic Intelligence Agent leverages **Retrieval-Augmented Generation (RAG)** to provide evidence-based strategic intelligence.
+
+Instead of relying solely on the Large Language Model's internal knowledge, the system retrieves relevant business documents from a semantic vector database before any analysis begins.
+
+This ensures that all AI-generated insights are grounded in real business news and supporting evidence.
+
+---
+
+# 🧠 Retrieval-Augmented Generation (RAG) Pipeline
+
+```mermaid
+flowchart LR
+
+A["📰 Business News Dataset"]
+
+B["🧹 Data Cleaning"]
+
+C["📄 Master Dataset"]
+
+D["🧠 Sentence Transformer<br/>BAAI/bge-small-en-v1.5"]
+
+E["🔢 Dense Embeddings"]
+
+F["📚 FAISS Vector Database"]
+
+G["🔍 User Query"]
+
+H["🧠 Semantic Search"]
+
+I["📄 Top-K Relevant Documents"]
+
+J["🤖 Multi-Agent Analysis"]
+
+A --> B
+
+B --> C
+
+C --> D
+
+D --> E
+
+E --> F
+
+G --> H
+
+H --> F
+
+F --> I
+
+I --> J
+
+style A fill:#1976D2,color:white
+style B fill:#00897B,color:white
+style C fill:#5C6BC0,color:white
+style D fill:#8E24AA,color:white
+style E fill:#3949AB,color:white
+style F fill:#673AB7,color:white
+style G fill:#E53935,color:white
+style H fill:#43A047,color:white
+style I fill:#FB8C00,color:white
+style J fill:#D81B60,color:white
+```
+
+---
+
+# 📚 Knowledge Base Construction
+
+The knowledge base is constructed through a multi-stage preprocessing pipeline.
+
+## Stage 1 — Data Collection
+
+Business news articles are collected and consolidated into a master dataset.
+
+Each document contains:
+
+- Title
+- Source
+- Publication Date
+- Article Content
+
+---
+
+## Stage 2 — Data Processing
+
+Each article is cleaned and standardized before embedding generation.
+
+Typical preprocessing includes:
+
+- Removing missing values
+- Text normalization
+- Metadata extraction
+- Dataset consolidation
+
+---
+
+## Stage 3 — Embedding Generation
+
+Every document is transformed into a dense semantic vector using:
+
+| Component | Technology |
+|-----------|------------|
+| Embedding Model | BAAI/bge-small-en-v1.5 |
+| Library | SentenceTransformers |
+| Output | Dense Vector Representation |
+
+These embeddings capture the semantic meaning of each document rather than relying on keyword matching.
+
+---
+
+## Stage 4 — Vector Indexing
+
+The generated embeddings are stored inside a **FAISS Vector Database**.
+
+Advantages of FAISS include:
+
+- High-speed similarity search
+- Efficient nearest-neighbor retrieval
+- Scalable indexing
+- Low-latency document lookup
+
+---
+
+# 🔍 Semantic Search Workflow
+
+```mermaid
+sequenceDiagram
+
+actor User
+
+participant Planner
+
+participant Retriever
+
+participant FAISS
+
+participant Documents
+
+User->>Planner: Strategic Goal
+
+Planner->>Retriever: Retrieve Relevant Articles
+
+Retriever->>FAISS: Query Embedding
+
+FAISS-->>Retriever: Top-K Similar Documents
+
+Retriever-->>Documents: Retrieved Articles
+
+Documents-->>Retriever: Article Content
+
+Retriever-->>Planner: Relevant Evidence
+```
+
+---
+
+# 🧠 Why Semantic Search?
+
+Traditional keyword search retrieves documents based only on matching words.
+
+Semantic search retrieves documents based on **meaning**, enabling the system to discover relevant information even when different terminology is used.
+
+Example:
+
+| User Query | Retrieved Result |
+|------------|------------------|
+| AI chip competition | NVIDIA Blackwell architecture |
+| GPU demand | Data center infrastructure expansion |
+| Semiconductor market | Advanced packaging technologies |
+
+---
+
+# 📊 FAISS Retrieval Pipeline
+
+```mermaid
+flowchart TD
+
+A["📄 Business Articles"]
+
+B["🧠 Generate Embeddings"]
+
+C["📚 FAISS Index"]
+
+D["🎯 User Query"]
+
+E["🔢 Query Embedding"]
+
+F["🔍 Similarity Search"]
+
+G["📄 Top-K Articles"]
+
+H["🤖 AI Agents"]
+
+A --> B
+
+B --> C
+
+D --> E
+
+E --> F
+
+F --> C
+
+C --> G
+
+G --> H
+
+style A fill:#1976D2,color:white
+style B fill:#673AB7,color:white
+style C fill:#5E35B1,color:white
+style D fill:#E53935,color:white
+style E fill:#8E24AA,color:white
+style F fill:#43A047,color:white
+style G fill:#FB8C00,color:white
+style H fill:#D81B60,color:white
+```
+
+---
+
+# 📈 Retrieval Process
+
+The retrieval process follows four key stages:
+
+| Step | Description |
+|------|-------------|
+| **1. Encode Query** | Convert the user's strategic goal into a semantic embedding |
+| **2. Search FAISS** | Perform nearest-neighbor similarity search |
+| **3. Retrieve Top-K** | Return the most relevant business articles |
+| **4. Pass to AI Agents** | Supply retrieved evidence to all specialized agents |
+
+---
+
+# 🚀 Benefits of the Retrieval Layer
+
+- 🔍 Semantic understanding instead of keyword matching
+- 📚 Evidence-grounded AI reasoning
+- ⚡ Fast similarity search using FAISS
+- 🧠 Improved response relevance
+- ✔ Reduced hallucination risk
+- 📈 Scalable document retrieval
+- 🤖 Supports autonomous multi-agent analysis
+
+---
+
+# 💡 Why Retrieval Matters
+
+Without semantic retrieval, the Large Language Model would rely primarily on its pre-trained knowledge.
+
+By integrating a vector database, the system grounds every strategic recommendation in **real business articles**, enabling:
+
+- Explainable AI outputs
+- Evidence-based strategic insights
+- Higher reliability
+- Improved executive trust
+
+This Retrieval-Augmented Generation (RAG) pipeline forms the foundation of the entire strategic intelligence system.
+
+---
+# 🧠 AI Analysis & Intelligence Engine
+
+After retrieving relevant business documents, the AI CEO Strategic Intelligence Agent performs a multi-stage analysis using specialized AI agents.
+
+Each agent focuses on a single strategic objective while collaborating through the **Shared Agent Memory**.
+
+This modular approach enables explainable, evidence-based strategic reasoning.
+
+---
+
+# 🤖 Intelligence Generation Pipeline
+
+```mermaid
+flowchart LR
+
+A["📄 Retrieved Documents"]
+
+A --> B["🚀 Opportunity Analyzer"]
+
+A --> C["⚠️ Risk Analyzer"]
+
+A --> D["📈 Trend Analyzer"]
+
+A --> E["😊 Sentiment Analyzer"]
+
+B --> F["🧠 Shared Memory"]
+
+C --> F
+
+D --> F
+
+E --> F
+
+F --> G["✔️ Validation Engine"]
+
+G --> H["👔 Strategic Intelligence Engine"]
+
+H --> I["📑 CEO Strategic Report"]
+
+style A fill:#1976D2,color:white
+style B fill:#43A047,color:white
+style C fill:#E53935,color:white
+style D fill:#FB8C00,color:white
+style E fill:#26C6DA,color:white
+style F fill:#8E24AA,color:white
+style G fill:#7CB342,color:white
+style H fill:#D81B60,color:white
+style I fill:#3949AB,color:white
+```
+
+---
+
+# 🚀 Opportunity Analyzer
+
+The Opportunity Analyzer identifies strategic business opportunities supported by retrieved evidence.
+
+Its objective is to discover areas where the organization can create value, expand capabilities, or strengthen its competitive advantage.
+
+### Responsibilities
+
+- Detect growth opportunities
+- Identify investment potential
+- Discover innovation opportunities
+- Extract supporting evidence
+- Assign business impact
+
+### Output
+
+```json
+{
+  "opportunity": "...",
+  "evidence": "...",
+  "impact": "High"
+}
+```
+
+---
+
+# ⚠️ Risk Analyzer
+
+The Risk Analyzer evaluates business documents to identify operational and strategic risks.
+
+Only evidence-backed risks are retained.
+
+### Responsibilities
+
+- Identify strategic risks
+- Detect operational challenges
+- Highlight market uncertainty
+- Evaluate potential impact
+
+### Output
+
+```json
+{
+  "risk": "...",
+  "evidence": "...",
+  "impact": "Medium"
+}
+```
+
+---
+
+# 📈 Trend Analyzer
+
+The Trend Analyzer discovers emerging technologies, market movements, and innovation signals.
+
+### Responsibilities
+
+- Technology trends
+- Market trends
+- Innovation signals
+- Industry developments
+
+### Output
+
+```json
+{
+  "trend": "...",
+  "evidence": "...",
+  "impact": "High"
+}
+```
+
+---
+
+# 😊 Sentiment Analyzer
+
+The Sentiment Analyzer evaluates each retrieved article independently to determine overall market sentiment.
+
+Each article is classified into one of three categories.
+
+| Sentiment | Meaning |
+|-----------|---------|
+| 🟢 Positive | Optimistic business outlook |
+| 🟡 Neutral | Balanced reporting |
+| 🔴 Negative | Concern or uncertainty |
+
+### Output
+
+```json
+{
+  "title":"...",
+  "sentiment":"Positive",
+  "reason":"..."
+}
+```
+
+---
+
+# 🧠 Shared Memory Collaboration
+
+Every AI agent writes its findings into a centralized Shared Agent Memory.
+
+```mermaid
+flowchart TD
+
+Retriever["📄 Retrieved Documents"]
+
+Retriever --> Opportunity["🚀 Opportunity"]
+
+Retriever --> Risk["⚠️ Risk"]
+
+Retriever --> Trend["📈 Trend"]
+
+Retriever --> Sentiment["😊 Sentiment"]
+
+Opportunity --> Memory["🧠 Shared Memory"]
+
+Risk --> Memory
+
+Trend --> Memory
+
+Sentiment --> Memory
+
+style Retriever fill:#1976D2,color:white
+style Opportunity fill:#43A047,color:white
+style Risk fill:#E53935,color:white
+style Trend fill:#FB8C00,color:white
+style Sentiment fill:#26C6DA,color:white
+style Memory fill:#8E24AA,color:white
+```
+
+The Shared Memory stores:
+
+- Retrieved Documents
+- Opportunities
+- Risks
+- Trends
+- Sentiment
+- Validation Results
+- Final Executive Report
+
+This enables independent AI agents to collaborate without direct dependencies.
+
+---
+
+# ✔️ Validation Engine
+
+Before generating the final report, every AI-generated insight is validated.
+
+The Validation Engine ensures:
+
+- Required fields are present
+- Supporting evidence exists
+- Impact levels are valid
+- Duplicate findings are removed
+- Sentiment labels are valid
+
+Only validated information is passed to the Strategic Intelligence Engine.
+
+---
+
+## Validation Workflow
+
+```mermaid
+flowchart LR
+
+A["🤖 AI Outputs"]
+
+B["✔️ Check Required Fields"]
+
+C["📚 Verify Evidence"]
+
+D["🎯 Validate Impact"]
+
+E["🧹 Remove Duplicates"]
+
+F["✅ Validated Intelligence"]
+
+A --> B
+
+B --> C
+
+C --> D
+
+D --> E
+
+E --> F
+
+style A fill:#3949AB,color:white
+style B fill:#43A047,color:white
+style C fill:#26C6DA,color:white
+style D fill:#FB8C00,color:white
+style E fill:#8E24AA,color:white
+style F fill:#7CB342,color:white
+```
+
+---
+
+# 👔 Strategic Intelligence Engine
+
+After validation, all verified intelligence is synthesized into a comprehensive executive report.
+
+The Strategic Intelligence Engine combines:
+
+- Strategic Opportunities
+- Strategic Risks
+- Emerging Trends
+- Market Sentiment
+
+into a structured **CEO Strategic Intelligence Report**.
+
+---
+
+# 📑 CEO Strategic Intelligence Report
+
+The generated report includes:
+
+| Section | Description |
+|---------|-------------|
+| 📌 Executive Summary | High-level overview of strategic findings |
+| 🚀 Strategic Opportunities | Business growth opportunities |
+| ⚠️ Strategic Risks | Evidence-backed risks |
+| 📈 Emerging Trends | Technology and market trends |
+| 😊 Sentiment Analysis | News, public sentiment, and sentiment trends |
+| 🎯 Strategic Recommendations | Prioritized executive recommendations |
+| 👔 CEO Briefing | What happened, why it matters, and next actions |
+
+---
+
+# 🎯 End Result
+
+```mermaid
+flowchart TD
+
+A["📄 Retrieved Evidence"]
+
+A --> B["🤖 AI Analysis"]
+
+B --> C["✔️ Validation"]
+
+C --> D["👔 Strategic Intelligence"]
+
+D --> E["📑 CEO Report"]
+
+E --> F["📊 Executive Dashboard"]
+
+style A fill:#1976D2,color:white
+style B fill:#8E24AA,color:white
+style C fill:#7CB342,color:white
+style D fill:#D81B60,color:white
+style E fill:#3949AB,color:white
+style F fill:#00897B,color:white
+```
+
+---
+
+# ⭐ Key Advantages
+
+- 🎯 Specialized AI agents for focused reasoning
+- 📚 Evidence-based strategic analysis
+- ✔️ Automated validation of AI outputs
+- 🧠 Shared memory collaboration
+- 📊 Executive-ready intelligence generation
+- 🔄 Modular and extensible architecture
+- 🚀 Transparent decision-support pipeline
+
+The result is a robust strategic intelligence system capable of transforming raw business news into validated, actionable insights for executive decision-making.
+
+---
+# 📊 Executive Intelligence Dashboard
+
+The AI CEO Strategic Intelligence Agent provides an interactive **Streamlit Dashboard** that enables executives to explore AI-generated business intelligence through intuitive visualizations and structured reports.
+
+The dashboard transforms complex strategic analysis into actionable insights that support executive decision-making.
+
+---
+
+# 🎯 Dashboard Overview
+
+The dashboard guides users through the complete strategic intelligence workflow—from entering a business objective to reviewing the final CEO report.
+
+```mermaid
+flowchart LR
+
+A["🎯 Strategic Goal"]
+
+B["🧠 AI Planner"]
+
+C["⚙️ AI Execution"]
+
+D["📊 Dashboard"]
+
+E["👔 CEO Report"]
+
+A --> B
+
+B --> C
+
+C --> D
+
+D --> E
+
+style A fill:#1976D2,color:white
+style B fill:#673AB7,color:white
+style C fill:#26A69A,color:white
+style D fill:#3949AB,color:white
+style E fill:#D81B60,color:white
+```
+
+---
+
+# 🖥 Dashboard Sections
+
+| Section | Description |
+|----------|-------------|
+| 🎯 Strategic Goal | Accepts executive business objectives |
+| 🧠 Execution Plan | Displays the AI-generated workflow |
+| 📄 Retrieved Articles | Shows evidence retrieved from the FAISS knowledge base |
+| 🚀 Opportunity Analysis | Displays strategic opportunities |
+| ⚠ Risk Analysis | Highlights strategic and operational risks |
+| 📈 Trend Analysis | Shows emerging market and technology trends |
+| 😊 Sentiment Analysis | Visualizes market sentiment |
+| ✔ Validation Summary | Displays validated AI outputs |
+| 👔 CEO Strategic Report | Final executive intelligence report |
+
+---
+
+# 📌 Dashboard Workflow
+
+```mermaid
+flowchart TD
+
+Input["🎯 User Goal"]
+
+Planner["🧠 Planner"]
+
+Executor["⚙️ Executor"]
+
+Agents["🤖 AI Agents"]
+
+Validator["✔ Validation"]
+
+Report["👔 CEO Report"]
+
+Dashboard["📊 Streamlit Dashboard"]
+
+Input --> Planner
+
+Planner --> Executor
+
+Executor --> Agents
+
+Agents --> Validator
+
+Validator --> Report
+
+Report --> Dashboard
+
+style Input fill:#1976D2,color:white
+style Planner fill:#673AB7,color:white
+style Executor fill:#0097A7,color:white
+style Agents fill:#FB8C00,color:white
+style Validator fill:#7CB342,color:white
+style Report fill:#D81B60,color:white
+style Dashboard fill:#00897B,color:white
+```
+
+---
+
+# 📈 Dashboard Analytics
+
+The dashboard summarizes the analysis using key performance indicators (KPIs).
+
+### Executive KPI Cards
+
+- 🚀 Total Opportunities
+- ⚠ Total Risks
+- 📈 Emerging Trends
+- 😊 Market Sentiment Distribution
+- 📄 Retrieved Articles
+- ✔ Validation Status
+
+---
+
+# 📊 Interactive Visualizations
+
+The dashboard includes multiple interactive visualizations to support executive decision-making.
+
+| Visualization | Purpose |
+|--------------|---------|
+| 📊 Bar Chart | Opportunity, Risk, and Trend counts |
+| 🥧 Pie Chart | Sentiment distribution |
+| 📈 Trend Graph | Emerging technology trends |
+| 📋 KPI Cards | High-level executive metrics |
+| 📄 Expandable Reports | Detailed AI-generated findings |
+
+---
+
+# 🚀 Strategic Opportunities
+
+Each identified opportunity includes:
+
+- Opportunity Description
+- Supporting Evidence
+- Business Impact
+
+Example:
+
+```text
+Opportunity
+
+Expand AI infrastructure partnerships
+
+Evidence
+
+Microsoft expands investment in AI data centers.
+
+Impact
+
+High
+```
+
+---
+
+# ⚠ Strategic Risks
+
+Each identified risk includes:
+
+- Risk Description
+- Supporting Evidence
+- Risk Impact
+
+Example:
+
+```text
+Risk
+
+Supply chain dependence on advanced packaging
+
+Evidence
+
+Increasing demand for semiconductor manufacturing capacity.
+
+Impact
+
+High
+```
+
+---
+
+# 📈 Emerging Trends
+
+Trend Analysis identifies major technology and business developments.
+
+Examples include:
+
+- AI Infrastructure Growth
+- Generative AI Adoption
+- Semiconductor Innovation
+- Data Center Expansion
+- Cloud Computing Investment
+
+---
+
+# 😊 Market Sentiment
+
+The dashboard summarizes article-level sentiment.
+
+Sentiment Categories:
+
+🟢 Positive
+
+🟡 Neutral
+
+🔴 Negative
+
+Each sentiment includes:
+
+- Article Title
+- Sentiment Classification
+- Evidence-Based Reason
+
+---
+
+# 👔 CEO Strategic Intelligence Report
+
+The dashboard concludes with an executive-level report generated by the Strategic Intelligence Engine.
+
+The report contains:
+
+- 📌 Executive Summary
+- 🚀 Strategic Opportunities
+- ⚠ Strategic Risks
+- 📈 Emerging Trends
+- 😊 Market Sentiment
+- 🎯 Strategic Recommendations
+- 👔 CEO Briefing
+
+This enables executives to quickly understand:
+
+- What happened?
+- Why does it matter?
+- What should management do next?
+
+---
+
+# 🎯 Executive Decision Support
+
+```mermaid
+flowchart LR
+
+Data["📄 Business Intelligence"]
+
+AI["🤖 Multi-Agent Analysis"]
+
+Insights["📊 Strategic Insights"]
+
+CEO["👔 Executive Decisions"]
+
+Data --> AI
+
+AI --> Insights
+
+Insights --> CEO
+
+style Data fill:#1976D2,color:white
+style AI fill:#8E24AA,color:white
+style Insights fill:#43A047,color:white
+style CEO fill:#D81B60,color:white
+```
+
+---
+
+# ⭐ Dashboard Highlights
+
+✅ Interactive executive dashboard
+
+✅ Real-time AI workflow visualization
+
+✅ Evidence-backed strategic insights
+
+✅ Executive KPI metrics
+
+✅ Explainable AI recommendations
+
+✅ Professional CEO briefing
+
+The dashboard serves as the final interface between the Multi-Agent AI System and executive decision-makers, transforming complex analytical outputs into actionable business intelligence.
+
+# ⚙️ Installation & Usage
+
+## 📋 Prerequisites
+
+Before running the project, ensure the following software is installed.
+
+| Software | Version |
+|-----------|----------|
+| Python | 3.11+ |
+| Ollama | Latest |
+| Git | Latest |
+| Streamlit | Latest |
+
+---
+
+# 📦 Clone Repository
+
+```bash
+git clone https://github.com/<your-username>/AI-CEO-Strategic-Intelligence-Agent.git
+
+cd AI-CEO-Strategic-Intelligence-Agent
+```
+
+---
+
+# 🐍 Create Virtual Environment
+
+### Windows
+
+```bash
+python -m venv venv
+
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+python3 -m venv venv
+
+source venv/bin/activate
+```
+
+---
+
+# 📥 Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🤖 Install Ollama
+
+Download Ollama from:
+
+https://ollama.com/download
+
+---
+
+# 📥 Pull the Qwen Model
+
+```bash
+ollama pull qwen2.5:3b
+```
+
+Verify installation
+
+```bash
+ollama run qwen2.5:3b
+```
+
+---
+
+# 📚 Build the Knowledge Base
+
+Generate document embeddings
+
+```bash
+python scripts/generate_embeddings.py
+```
+
+Build the FAISS index
+
+```bash
+python scripts/build_faiss_index.py
+```
+
+---
+
+# 🚀 Launch the Dashboard
+
+```bash
+streamlit run dashboard/app.py
+```
+
+Open
+
+```
+http://localhost:8501
+```
+
+---
+
+# 🧪 Example Usage
+
+Example Goal
+
+```
+Analyze NVIDIA's strategic opportunities in the AI chip market.
+```
+
+The AI system automatically performs:
+
+```
+Semantic Retrieval
+
+↓
+
+Opportunity Analysis
+
+↓
+
+Risk Analysis
+
+↓
+
+Trend Detection
+
+↓
+
+Sentiment Analysis
+
+↓
+
+Validation
+
+↓
+
+Strategic Intelligence Report
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+AI-CEO-Strategic-Intelligence-Agent
+│
+├── agent
+│   ├── executor.py
+│   ├── planner.py
+│   ├── retriever.py
+│   ├── opportunity.py
+│   ├── risk.py
+│   ├── trend.py
+│   ├── sentiment.py
+│   ├── validator.py
+│   ├── strategic_intelligence.py
+│   ├── llm_helper.py
+│   └── tools.py
+│
+├── dashboard
+│   └── app.py
+│
+├── data
+│   ├── processed
+│   │     ├── master_dataset.csv
+│   │     ├── embeddings.npy
+│   │     └── faiss_index.bin
+│   │
+│   └── raw
+│
+├── scripts
+│   ├── generate_embeddings.py
+│   └── build_faiss_index.py
+│
+├── requirements.txt
+│
+├── main.py
+│
+└── README.md
+```
+
+---
+
+# 💻 Technology Stack
+
+| Category | Technology |
+|----------|------------|
+| Programming Language | Python 3.11 |
+| Large Language Model | Qwen 2.5 (Ollama) |
+| Embedding Model | BAAI/bge-small-en-v1.5 |
+| Vector Database | FAISS |
+| Embedding Library | SentenceTransformers |
+| Dashboard | Streamlit |
+| Data Processing | Pandas, NumPy |
+| Visualization | Plotly |
+| AI Architecture | Multi-Agent AI |
+| Retrieval | Retrieval-Augmented Generation (RAG) |
+
+---
+
+# 🔧 Core Components
+
+| Component | Responsibility |
+|-----------|----------------|
+| Planner | Generates execution plan |
+| Executor | Executes AI workflow |
+| Semantic Retriever | Retrieves relevant articles |
+| Opportunity Analyzer | Finds strategic opportunities |
+| Risk Analyzer | Detects business risks |
+| Trend Analyzer | Identifies emerging trends |
+| Sentiment Analyzer | Evaluates market sentiment |
+| Validator | Verifies AI-generated outputs |
+| Strategic Intelligence Engine | Generates executive reports |
+
+---
+
+# 📊 Performance Characteristics
+
+| Metric | Description |
+|----------|------------|
+| Retrieval Method | Semantic Similarity Search |
+| Embedding Dimension | 384 |
+| Vector Search Engine | FAISS IndexFlatL2 |
+| Knowledge Source | Business News Articles |
+| AI Reasoning | Local Qwen 2.5 via Ollama |
+| Report Generation | Structured JSON Output |
+
+---
+
+# 🎯 Design Principles
+
+The system was developed around the following software engineering principles.
+
+### 🧠 Modularity
+
+Each AI agent performs one well-defined responsibility.
+
+---
+
+### 🔄 Separation of Concerns
+
+Planning, execution, retrieval, analysis, validation, and reporting are implemented as independent components.
+
+---
+
+### 📚 Evidence-Based Reasoning
+
+Every recommendation generated by the AI must be supported by retrieved business evidence.
+
+---
+
+### ✔ Explainability
+
+All strategic findings include supporting evidence, impact assessment, and validation.
+
+---
+
+### ⚡ Extensibility
+
+New AI agents can be added simply by registering them in the Tool Registry without changing the Executor.
+
+---
+
+# 📈 Current Capabilities
+
+✅ Semantic document retrieval
+
+✅ Opportunity analysis
+
+✅ Risk analysis
+
+✅ Trend detection
+
+✅ Sentiment analysis
+
+✅ AI validation
+
+✅ Executive report generation
+
+✅ Interactive dashboard
+
+✅ Multi-Agent architecture
+
+---
+
+# 🔮 Future Enhancements
+
+The project can be extended with several advanced capabilities.
+
+### 🤖 Advanced AI
+
+- GPT-4 / Llama integration
+- Multi-LLM routing
+- Autonomous planning improvements
+
+---
+
+### 📈 Analytics
+
+- Time-series trend forecasting
+- Predictive business intelligence
+- Competitive benchmarking
+
+---
+
+### 🌍 Data Sources
+
+- Financial reports
+- SEC filings
+- Company earnings calls
+- Real-time news APIs
+- Social media analytics
+
+---
+
+### ☁ Deployment
+
+- Docker support
+- Kubernetes deployment
+- REST API
+- Cloud hosting
+- Authentication
+
+---
+
+# 🏆 Learning Outcomes
+
+This project demonstrates practical experience with:
+
+- Multi-Agent AI Systems
+- Retrieval-Augmented Generation (RAG)
+- Vector Databases (FAISS)
+- Local Large Language Models
+- Semantic Search
+- AI Planning & Execution
+- Streamlit Dashboard Development
+- Explainable AI
+- Executive Decision Support Systems
+
+---
+
+# 📜 License
+
+This project is released under the **MIT License**.
+
+---
+
+# 👨‍💻 Author
+
+**Your Name**
+
+Master of Information Technology
+
+Specialization: Artificial Intelligence
+
+GitHub: https://github.com/<your-username>
+
+LinkedIn: https://linkedin.com/in/<your-profile>
+
+---
+
+<div align="center">
+
+## ⭐ If you found this project interesting, consider giving it a star!
+
+Built with ❤️ using Python, Ollama, FAISS, Streamlit, and Multi-Agent AI.
+
+</div>
