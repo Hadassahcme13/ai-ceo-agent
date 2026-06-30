@@ -524,9 +524,9 @@ MIT License
 
 ## 👨‍💻 Author
 
-**Your Name**
-Master of Information Technology — Specialization: Artificial Intelligence
-GitHub: https://github.com/<your-username> · LinkedIn: https://linkedin.com/in/<your-profile>
+**Hadassah Mercy Gottemukula**
+Master of Data Science and Artificial Intelligence 
+
 
 ---
 
