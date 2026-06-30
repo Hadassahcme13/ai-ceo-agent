@@ -2,545 +2,149 @@
 
 # 🤖 AI CEO Strategic Intelligence Agent
 
-### Autonomous Multi-Agent AI System for Executive Decision Intelligence
+### Autonomous Multi-Agent AI System for Executive Strategic Decision Intelligence
 
 <p align="center">
 
-<img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge">
-
-<img src="https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge">
-
-<img src="https://img.shields.io/badge/Ollama-Qwen2.5-green?style=for-the-badge">
-
-<img src="https://img.shields.io/badge/FAISS-Vector_DB-purple?style=for-the-badge">
-
-<img src="https://img.shields.io/badge/LLM-Qwen_2.5-orange?style=for-the-badge">
-
-<img src="https://img.shields.io/badge/Multi-Agent-AI-success?style=for-the-badge">
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?style=for-the-badge&logo=streamlit)
+![Ollama](https://img.shields.io/badge/Ollama-Qwen2.5-green?style=for-the-badge)
+![FAISS](https://img.shields.io/badge/FAISS-Vector%20Database-purple?style=for-the-badge)
+![Sentence Transformers](https://img.shields.io/badge/SentenceTransformers-bge--small--en--v1.5-orange?style=for-the-badge)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Dashboard-blueviolet?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
 
 </p>
 
 ---
 
-### 🚀 Autonomous Multi-Agent AI System for Strategic Business Intelligence
+### 🧠 Planner • Executor • Semantic Search • Multi-Agent AI • Strategic Intelligence • RAG • Executive Decision Support
 
-Retrieve ➜ Analyze ➜ Validate ➜ Recommend ➜ Generate CEO Reports
+Transform business news into **CEO-ready strategic intelligence reports** using **Autonomous AI Agents**, **Semantic Retrieval**, **Retrieval-Augmented Generation (RAG)** and **Local Large Language Models**.
 
 </div>
 
 ---
 
-# 📖 Overview
+# 📖 Project Overview
 
-The **AI CEO Strategic Intelligence Agent** is an autonomous **Multi-Agent AI System** that assists executive leadership in making strategic decisions through evidence-driven business intelligence.
+The **AI CEO Strategic Intelligence Agent** is an autonomous **Multi-Agent Artificial Intelligence System** that assists executive leadership in making evidence-based strategic decisions from large collections of business news.
 
-Instead of using a single LLM prompt, the system decomposes the task into multiple specialized AI agents that collaborate through a shared memory architecture.
+Instead of asking a single Large Language Model to solve everything, the system divides the task into multiple specialized AI agents that collaborate through a **shared memory architecture**.
 
-The system performs:
+Each AI agent performs one specific responsibility:
 
-- 🔍 Semantic Search
-- 🚀 Opportunity Analysis
-- ⚠ Strategic Risk Analysis
-- 📈 Emerging Trend Detection
-- 😊 Market Sentiment Analysis
-- ✔ Evidence Validation
-- 👔 Executive Strategic Intelligence Generation
+- 🔍 Retrieve relevant information
+- 🚀 Identify strategic opportunities
+- ⚠ Analyze business risks
+- 📈 Detect emerging trends
+- 😊 Assess market sentiment
+- ✔ Validate all findings
+- 👔 Generate an executive strategic intelligence report
 
----
-
-# ✨ Features
-
-| Feature | Description |
-|---------|-------------|
-| 🧠 AI Planner | Dynamically creates execution workflows |
-| 🔍 Semantic Retrieval | Retrieves relevant business documents using FAISS |
-| 🚀 Opportunity Analyzer | Identifies strategic opportunities |
-| ⚠ Risk Analyzer | Detects business risks |
-| 📈 Trend Analyzer | Detects emerging technologies & innovations |
-| 😊 Sentiment Analyzer | Performs market sentiment analysis |
-| ✔ Validation Engine | Ensures evidence-based outputs |
-| 👔 Strategic Intelligence Engine | Generates CEO strategic reports |
-| 📊 Streamlit Dashboard | Interactive executive dashboard |
-| 🔄 Shared Agent Memory | Enables collaboration among AI agents |
+The final output is presented through an interactive **Streamlit Dashboard** designed for executive decision support.
 
 ---
 
-# 🏗️ System Architecture
+# ✨ Key Features
+
+| Category | Capability |
+|-----------|------------|
+| 🧠 Autonomous Planner | Dynamically creates an execution plan based on the user's strategic goal |
+| ⚙ AI Executor | Executes every tool in sequence using shared memory |
+| 🔍 Semantic Search | Retrieves relevant documents using FAISS vector similarity |
+| 🚀 Opportunity Analysis | Identifies strategic business opportunities |
+| ⚠ Risk Analysis | Detects operational and strategic risks |
+| 📈 Trend Detection | Discovers emerging technologies and market trends |
+| 😊 Sentiment Analysis | Evaluates article-level market sentiment |
+| ✔ Validation Engine | Ensures all AI findings are evidence-based |
+| 👔 Strategic Intelligence Engine | Produces CEO-ready intelligence reports |
+| 📊 Executive Dashboard | Interactive visualization using Streamlit |
+
+---
+
+# 🎯 End-to-End AI Workflow
 
 ```mermaid
 flowchart TD
 
-    A["👤 User Strategic Goal"] --> B["🧠 AI Planner"]
-
-    B --> C["📋 Execution Plan"]
-
-    C --> D["🔍 Semantic Retriever"]
-
-    D --> E["📚 FAISS Knowledge Base"]
-
-    E --> F["🚀 Opportunity Analyzer"]
-
-    E --> G["⚠ Risk Analyzer"]
-
-    E --> H["📈 Trend Analyzer"]
-
-    E --> I["😊 Sentiment Analyzer"]
-
-    F --> J["✔ Validation Engine"]
-
-    G --> J
-
-    H --> J
-
-    I --> J
-
-    J --> K["👔 Strategic Intelligence Engine"]
-
-    K --> L["📄 CEO Strategic Intelligence Report"]
-
-    L --> M["📊 Streamlit Dashboard"]
-
-
-style A fill:#4CAF50,color:#fff,stroke:#1B5E20,stroke-width:2px
-style B fill:#2196F3,color:#fff,stroke:#0D47A1,stroke-width:2px
-style C fill:#90CAF9,color:#000
-style D fill:#7E57C2,color:#fff
-style E fill:#673AB7,color:#fff
-style F fill:#26A69A,color:#fff
-style G fill:#EF5350,color:#fff
-style H fill:#FF9800,color:#fff
-style I fill:#42A5F5,color:#fff
-style J fill:#8BC34A,color:#fff
-style K fill:#F06292,color:#fff
-style L fill:#3F51B5,color:#fff
-style M fill:#009688,color:#fff
-```
-
----
-
-# 🤖 Multi-Agent Collaboration
-
-```mermaid
-flowchart LR
-
-Planner["🧠 Planner"]
-
-Retriever["🔍 Retriever"]
-
-Opportunity["🚀 Opportunity"]
-
-Risk["⚠ Risk"]
-
-Trend["📈 Trend"]
-
-Sentiment["😊 Sentiment"]
-
-Validator["✔ Validator"]
-
-Intelligence["👔 Intelligence"]
-
-Dashboard["📊 Dashboard"]
-
-Planner --> Retriever
-
-Retriever --> Opportunity
-
-Retriever --> Risk
-
-Retriever --> Trend
-
-Retriever --> Sentiment
-
-Opportunity --> Validator
-
-Risk --> Validator
-
-Trend --> Validator
-
-Sentiment --> Validator
-
-Validator --> Intelligence
-
-Intelligence --> Dashboard
-
-style Planner fill:#2196F3,color:white
-style Retriever fill:#7E57C2,color:white
-style Opportunity fill:#4CAF50,color:white
-style Risk fill:#F44336,color:white
-style Trend fill:#FF9800,color:white
-style Sentiment fill:#00BCD4,color:white
-style Validator fill:#8BC34A,color:white
-style Intelligence fill:#E91E63,color:white
-style Dashboard fill:#009688,color:white
-```
-
----
-
-# 🧠 Shared Agent Memory
-
-```mermaid
-flowchart TD
-
-Memory["🧠 Shared Memory"]
-
-Memory --> Docs["📚 Documents"]
-
-Memory --> Opp["🚀 Opportunities"]
-
-Memory --> Risks["⚠ Risks"]
-
-Memory --> Trends["📈 Trends"]
-
-Memory --> Sentiment["😊 Sentiment"]
-
-Memory --> Validation["✔ Validation"]
-
-Memory --> Report["👔 Final Report"]
-
-style Memory fill:#673AB7,color:white
-style Docs fill:#42A5F5,color:white
-style Opp fill:#4CAF50,color:white
-style Risks fill:#EF5350,color:white
-style Trends fill:#FFA726,color:white
-style Sentiment fill:#26C6DA,color:white
-style Validation fill:#9CCC65,color:white
-style Report fill:#E91E63,color:white
-```
-
----
-
-# 🔄 End-to-End Workflow
-
-```mermaid
-sequenceDiagram
-
-actor User
-
-participant Planner
-
-participant Retriever
-
-participant Opportunity
-
-participant Risk
-
-participant Trend
-
-participant Sentiment
-
-participant Validator
-
-participant Intelligence
-
-participant Dashboard
-
-User->>Planner: Strategic Goal
-
-Planner->>Retriever: Retrieve Evidence
-
-Retriever-->>Opportunity: Documents
-
-Retriever-->>Risk: Documents
-
-Retriever-->>Trend: Documents
-
-Retriever-->>Sentiment: Documents
-
-Opportunity->>Validator: Opportunities
-
-Risk->>Validator: Risks
-
-Trend->>Validator: Trends
-
-Sentiment->>Validator: Market Sentiment
-
-Validator->>Intelligence: Validated Evidence
-
-Intelligence->>Dashboard: CEO Strategic Report
-```
-
-# ⚙️ Installation
-
-## 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/AI-CEO-Agent.git
-
-cd AI-CEO-Agent
-```
-
----
-
-## 2️⃣ Create a Virtual Environment
-
-### Windows
-
-```bash
-python -m venv venv
-
-venv\Scripts\activate
-```
-
-### Linux / macOS
-
-```bash
-python3 -m venv venv
-
-source venv/bin/activate
-```
-
----
-
-## 3️⃣ Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## 4️⃣ Install Ollama
-
-Download Ollama
-
-https://ollama.com/download
-
-Pull the Qwen model
-
-```bash
-ollama pull qwen2.5:3b
-```
-
-Verify installation
-
-```bash
-ollama run qwen2.5:3b
-```
-
----
-
-## 5️⃣ Build the FAISS Knowledge Base
-
-```bash
-python scripts/build_content_dataset.py
-```
-
-This automatically
-
-- Downloads business articles
-- Cleans documents
-- Generates embeddings
-- Builds the FAISS vector database
-
----
-
-## 6️⃣ Launch the Dashboard
-
-```bash
-streamlit run dashboard/app.py
-```
-
-Open
-
-```
-http://localhost:8501
-```
-
----
-
-# 🖥 Dashboard Overview
-
-The Streamlit dashboard provides an executive interface for interacting with the AI system.
-
-## Dashboard Modules
-
-| Module | Description |
-|---------|-------------|
-| 🎯 Strategic Goal | Accepts CEO business objectives |
-| 🧠 Planner | Displays AI-generated execution plan |
-| 🔍 Retrieved Intelligence | Shows relevant articles |
-| 🚀 Opportunities | Strategic growth opportunities |
-| ⚠ Risks | Evidence-based business risks |
-| 📈 Trends | Emerging market trends |
-| 😊 Sentiment | Market sentiment dashboard |
-| ✔ Validation Report | AI quality assurance |
-| 👔 CEO Report | Executive strategic briefing |
-
----
-
-# 📊 Dashboard Workflow
-
-```mermaid
-flowchart LR
-
-Goal["🎯 Strategic Goal"]
-
-Planner["🧠 AI Planner"]
-
-Retrieve["🔍 Semantic Search"]
-
-Agents["🤖 AI Agents"]
-
-Validate["✔ Validation"]
-
-Report["👔 CEO Report"]
-
-Dashboard["📊 Dashboard"]
-
-Goal --> Planner
-
-Planner --> Retrieve
-
-Retrieve --> Agents
-
-Agents --> Validate
-
-Validate --> Report
-
-Report --> Dashboard
-
-style Goal fill:#4CAF50,color:white
-style Planner fill:#2196F3,color:white
-style Retrieve fill:#7E57C2,color:white
-style Agents fill:#FF9800,color:white
-style Validate fill:#8BC34A,color:white
-style Report fill:#E91E63,color:white
-style Dashboard fill:#009688,color:white
-```
-
----
-
-# 🧠 AI Planning Example
-
-User Goal
-
-```
-What are NVIDIA's major strategic opportunities?
-```
-
-Planner generates
-
-```text
-1. SemanticRetriever
-
-↓
-
-2. OpportunityAnalyzer
-
-↓
-
-3. RiskAnalyzer
-
-↓
-
-4. TrendAnalyzer
-
-↓
-
-5. SentimentAnalyzer
-
-↓
-
-6. Validator
-
-↓
-
-7. StrategicIntelligenceEngine
-```
-
-Each tool executes independently while sharing a common memory.
-
----
-
-# 📦 Technology Stack
-
-| Layer | Technology |
-|--------|------------|
-| Language | Python 3.11 |
-| LLM | Qwen 2.5 (Ollama) |
-| Vector Database | FAISS |
-| Embeddings | Sentence Transformers |
-| Dashboard | Streamlit |
-| AI Planning | Custom Planner |
-| Validation | Evidence-Based Validator |
-| Retrieval | Semantic Search |
-| Architecture | Multi-Agent AI |
-| Reports | JSON Structured Generation |
-
----
-
-# 📁 Folder Structure
-
-```text
-AI-CEO-Agent
-│
-├── agent
-│   ├── planner.py
-│   ├── executor.py
-│   ├── retriever.py
-│   ├── opportunity.py
-│   ├── risk.py
-│   ├── trend.py
-│   ├── sentiment.py
-│   ├── validator.py
-│   ├── strategic_intelligence.py
-│   ├── llm_helper.py
-│   └── tools.py
-│
-├── dashboard
-│   └── app.py
-│
-├── data
-│
-├── embeddings
-│
-├── rag
-│
-├── scripts
-│
-├── main.py
-│
-└── README.md
-```
-
----
-
-# 🎯 Core AI Pipeline
-
-```mermaid
-graph LR
-
-A["📰 Business News"]
-
-B["📚 FAISS"]
-
-C["🔍 Retriever"]
-
-D["🤖 AI Agents"]
-
-E["✔ Validator"]
-
-F["👔 Strategic Intelligence"]
-
-G["📊 Dashboard"]
+A([👤 User Strategic Goal])
 
 A --> B
 
-B --> C
+B["🧠 AI Planner
+Analyze Goal
+Generate Execution Plan"]
 
-C --> D
+B --> C["📋 Execution Plan"]
 
-D --> E
+C --> D["⚙️ AI Executor"]
 
-E --> F
+D --> E["🔍 Semantic Retriever"]
 
-F --> G
+E --> F[("📚 FAISS Knowledge Repository")]
 
-style A fill:#42A5F5,color:white
-style B fill:#7E57C2,color:white
-style C fill:#2196F3,color:white
-style D fill:#FF9800,color:white
-style E fill:#8BC34A,color:white
-style F fill:#E91E63,color:white
-style G fill:#009688,color:white
+F --> G["📄 Retrieved Documents"]
+
+G --> H["🚀 Opportunity Analyzer"]
+
+G --> I["⚠️ Risk Analyzer"]
+
+G --> J["📈 Trend Analyzer"]
+
+G --> K["😊 Sentiment Analyzer"]
+
+H --> L["🧠 Shared Agent Memory"]
+
+I --> L
+
+J --> L
+
+K --> L
+
+L --> M["✔️ Validation Engine"]
+
+M --> N["👔 Strategic Intelligence Engine"]
+
+N --> O["📑 CEO Strategic Intelligence Report"]
+
+O --> P["📊 Interactive Streamlit Dashboard"]
+
+style A fill:#1976D2,color:#fff,stroke:#0D47A1,stroke-width:2px
+style B fill:#673AB7,color:#fff
+style C fill:#9575CD,color:#fff
+style D fill:#0097A7,color:#fff
+style E fill:#3949AB,color:#fff
+style F fill:#3F51B5,color:#fff
+style G fill:#90CAF9,color:#000
+style H fill:#43A047,color:#fff
+style I fill:#E53935,color:#fff
+style J fill:#FB8C00,color:#fff
+style K fill:#26C6DA,color:#fff
+style L fill:#8E24AA,color:#fff
+style M fill:#7CB342,color:#fff
+style N fill:#D81B60,color:#fff
+style O fill:#283593,color:#fff
+style P fill:#00897B,color:#fff
 ```
+
+---
+
+# 💡 Why a Multi-Agent Architecture?
+
+Traditional Retrieval-Augmented Generation (RAG) systems retrieve documents and ask a single Large Language Model to generate an answer.
+
+This project instead adopts a **Multi-Agent AI Architecture**, where independent AI agents collaborate to solve different aspects of a strategic intelligence problem.
+
+### Benefits
+
+- 🧠 Specialized reasoning by dedicated AI agents
+- 🔄 Shared memory for inter-agent collaboration
+- ✔ Evidence validation before reporting
+- 📊 Explainable and transparent decision making
+- 📈 Modular and extensible architecture
+- 👔 Executive-focused intelligence generation
+
+The result is a scalable and explainable AI system capable of producing high-quality strategic recommendations for executive decision makers.
+
+---
